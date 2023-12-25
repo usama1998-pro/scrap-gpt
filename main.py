@@ -43,7 +43,7 @@ st.header(":robot_face: SCRAP-GPT")
 URL = st.text_input("Enter URL")
 
 
-if URL or "http://" not in URL:
+if URL:
     try:
         loader = WebBaseLoader([URL])
         document = loader.load()
