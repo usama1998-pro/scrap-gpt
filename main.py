@@ -66,7 +66,8 @@ if URL or "http://" not in URL:
             st.write(response)
 
     except Exception as e:
-        st.write("There was a problem try again!" + e)
+        st.write("There was a problem try again!")
+        st.error(e)
 
 else:
     st.write("You need to provide URL!")
