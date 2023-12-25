@@ -60,8 +60,8 @@ if URL or "http://" not in URL:
             response = chain.run(context=vecdb.similarity_search(user_question, k=3)[0], question=user_question)
             st.write(response)
 
-    except Exception:
-        st.write("There was a problem try again!")
+    except Exception as e:
+        st.write("There was a problem try again!" + e)
 
 else:
     st.write("You need to provide URL!")
